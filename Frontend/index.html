@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-wrapper">
+        <header>
+            <h1>Tweet Sentiment Analyzer</h1>
+            <p>Twitter</p>
+        </header>
+
+        <div class="container">
+
+            <div class="main-content">
+                <div class="card">
+                    <textarea id="tweetInput" placeholder="Type your tweet here... (e.g., 'I am so happy today!')"></textarea>
+                    <div class="buttons">
+                        <button onclick="analyzeSentiment()" class="btn-primary">Analyze Sentiment</button>
+                        <button onclick="fetchRandomTweet()" class="btn-secondary">Get Random Tweet</button>
+                    </div>
+                </div>
+
+                <div id="result" class="result-box hidden">
+                    <div class="result-header">
+                        <h3>Analysis Result</h3>
+                        <span id="sentimentEmoji" class="emoji">😐</span>
+                    </div>
+
+                    <p class="sentiment-text">Prediction: <strong id="sentimentLabel">--</strong></p>
+
+                    <div class="meter-container">
+                        <div class="meter-labels">
+                            <span>Negative</span>
+                            <span>Neutral</span>
+                            <span>Positive</span>
+                        </div>
+                        <div class="meter-bar">
+                            <div id="meterFill" class="meter-fill"></div>
+                            <div id="meterMarker" class="meter-marker"></div>
+                        </div>
+                        <p class="score-text">Confidence Score: <span id="confidenceScore">0</span></p>
+                    </div>
+
+                    <p id="realLabelSection" class="hidden">Actual Label in Dataset: <span id="realLabel">--</span></p>
+                </div>
+
+                <div id="loading" class="hidden">Analyzing....</div>
+            </div>
+
+            <div class="history-container">
+                <h3>🕒 Recent Analyses</h3>
+                <div class="table-wrapper">
+                    <table id="historyTable">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Tweet</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

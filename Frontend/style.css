@@ -1,0 +1,247 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c283a;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.app-wrapper {
+    width: 100%;
+    max-width: 1500px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #1da1f2;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #657786;
+    margin-top: 0;
+}
+
+
+/* --- LAYOUT GRID --- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Left Column */
+
+.main-content {
+    flex: 2;
+    width: 100%;
+}
+
+
+/* Right Column */
+
+.history-container {
+    flex: 1;
+    background: rgb(53, 224, 233);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 546px;
+    overflow-y: auto;
+}
+
+
+/* --- CARD & INPUTS --- */
+
+.card {
+    background: rgb(237, 168, 168);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 93%;
+    height: 200px;
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #071a26;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #08151d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #196ea3;
+}
+
+.btn-secondary {
+    background-color: #050621;
+    color: rgb(237, 223, 38);
+}
+
+.btn-secondary:hover {
+    background-color: #2e4f81;
+}
+
+
+/* --- RESULTS BOX --- */
+
+.result-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 8px solid #ccc;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.positive {
+    border-left-color: #17bf63 !important;
+}
+
+.negative {
+    border-left-color: #e0245e !important;
+}
+
+.neutral {
+    border-left-color: #ffad1f !important;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emoji {
+    font-size: 2rem;
+}
+
+
+/* --- METER --- */
+
+.meter-container {
+    margin-top: 15px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.meter-bar {
+    height: 9px;
+    background: linear-gradient(90deg, #e0245e 0%, #ffad1f 50%, #17bf63 100%);
+    border-radius: 5px;
+    position: relative;
+    margin: 8px 0;
+}
+
+.meter-marker {
+    width: 4px;
+    height: 16px;
+    background: #000;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transition: left 0.5s ease-out;
+}
+
+.meter-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #657786;
+}
+
+
+/* --- HISTORY TABLE --- */
+
+h3 {
+    margin-top: 0;
+    color: #050505;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+th {
+    color: #070808;
+    font-weight: 600;
+}
+
+.positive-text {
+    color: #17bf63;
+}
+
+.negative-text {
+    color: #e0245e;
+}
+
+.neutral-text {
+    color: #ffad1f;
+}
+
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
