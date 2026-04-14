@@ -26,17 +26,3 @@ Built with a **Python Flask** backend and a **Vanilla JavaScript** frontend, uti
     ├── style.css        # Styling & Animations
     ├── script.js        # Logic to connect Frontend to Backend
 ```
-
-## ⚙️ How to Run Locally
-
-### 1. Setup the Backend
-First, install the required libraries and start the server:
-```bash
-cd Backend
-pip install flask pandas nltk flask-cors
-python app.py
-```
-### 2. Setup the Frontend
-Open Frontend/index.html in any web browser.
-
-Tip: For best results, use the "Live Server" extension in VS Code.
